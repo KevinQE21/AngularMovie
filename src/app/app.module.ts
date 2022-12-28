@@ -32,7 +32,8 @@ import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
-import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component'
+import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
+import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component'
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { SelectorMultipleComponent } from './utilidades/selector-multiple/select
     FormularioCineComponent,
     MapaComponent,
     FormularioPeliculaComponent,
-    SelectorMultipleComponent
+    SelectorMultipleComponent,
+    AutocompleteActoresComponent
   ],
   imports: [
     BrowserModule,
