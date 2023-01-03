@@ -26,15 +26,18 @@ export class FormularioGeneroComponent implements OnInit {
   }
 
   @Output()
-  submit: EventEmitter<generoCreacionDTO> = new EventEmitter<generoCreacionDTO>();
+  onSubmit: EventEmitter<generoCreacionDTO> = new EventEmitter<generoCreacionDTO>();
 
   form: FormGroup;
   
   @Input()
   modelo: generoCreacionDTO;
   
+  @Input()
+  errores: string[] = [];
+  
   guardarCambios(){
-    this.submit.emit(this.form.value);
+    this.onSubmit.emit(this.form.value);
   }
 
   obtenerErrorCampoNombre(){

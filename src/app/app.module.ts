@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ListadoPeliculasComponent } from './peliculas/listado-peliculas/listado-peliculas.component';
@@ -33,7 +34,9 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
 import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
-import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component'
+import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
+import { MostrarErroresComponent } from './utilidades/mostrar-errores/mostrar-errores.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -63,7 +66,8 @@ import { AutocompleteActoresComponent } from './actores/autocomplete-actores/aut
     MapaComponent,
     FormularioPeliculaComponent,
     SelectorMultipleComponent,
-    AutocompleteActoresComponent
+    AutocompleteActoresComponent,
+    MostrarErroresComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +77,8 @@ import { AutocompleteActoresComponent } from './actores/autocomplete-actores/aut
     ReactiveFormsModule,
     LeafletModule,
     FormsModule,
+    HttpClientModule,
+    SweetAlert2Module.forRoot(),
     MarkdownModule.forRoot()
   ],
   providers: [],
